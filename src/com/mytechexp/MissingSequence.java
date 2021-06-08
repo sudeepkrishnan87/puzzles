@@ -1,7 +1,9 @@
 package com.mytechexp;
 
 import java.util.Arrays;
-
+/*
+Finding missing number from the sequence
+* */
 public class MissingSequence {
     public static void main(String[] args) {
 

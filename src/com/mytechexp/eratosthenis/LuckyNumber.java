@@ -1,5 +1,9 @@
 package com.mytechexp.eratosthenis;
+/*
+Question:A lucky number is a number which has exactly 2 distinct prime divisors.
 
+You are given a number A and you need to determine the count of lucky numbers between the range 1 to A (both inclusive).
+* */
 public class LuckyNumber {
     public int solve(int A)
     {
