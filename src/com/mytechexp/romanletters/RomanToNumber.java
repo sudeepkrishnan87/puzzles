@@ -1,9 +1,9 @@
-package com.puzzle.romanletters;
+package com.mytechexp.romanletters;
 
 import java.util.Scanner;
 
 public class RomanToNumber {
-    public static void main(String args[])
+    public static void main(String[] args)
     {
 Scanner sc=new Scanner(System.in);
 System.out.println("Enter the RomanLetter which you want to convert in  Capital");

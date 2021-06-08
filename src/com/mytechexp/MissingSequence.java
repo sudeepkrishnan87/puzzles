@@ -1,6 +1,5 @@
-package com.puzzle;
+package com.mytechexp;
 
-import java.lang.reflect.Array;
 import java.util.Arrays;
 
 public class MissingSequence {
