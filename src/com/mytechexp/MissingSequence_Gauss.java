@@ -4,8 +4,8 @@ import java.util.Arrays;
 /*
 Finding missing number from the sequence
 * */
-public class MissingSequence {
-    public static void main(String[] args) {
+public class MissingSequence_Gauss {
+    public static void main(String[] args) {    
 
         int[] num = {1, 2, 3, 4, 5, 6, 7, 9, 10};
         int largest = 10;
