@@ -39,17 +39,21 @@ import java.util.List;
 public class  SumOfDivisors {
     int modulo=1000*1000*1000+7;
 
-    ArrayList<Integer>primes=new ArrayList<>(10);
-    public int solve(int A) {
-      int factorial=fact(A);
+    ArrayList<Long>primes=new ArrayList<>();
 
-      int sum=1;
-      int[] sieve=findSieve(factorial);
+    public int solve(int A) {
+
+      long factorial=fact(A);
+
+      long sum=1l;
+      findSieve(factorial);
       int[] count =new int[primes.size()];
 
       int index=0;
       while(factorial>1)
       {
+           if(primes.size()==index)
+               break;
           if(factorial%primes.get(index)==0) {
               factorial /= primes.get(index);
               count[index] = ++count[index];
@@ -66,11 +70,12 @@ for(int i=0;i<primes.size();i++)
     }
 }
 
-     return sum;
+     return (int)sum;
     }
-   private int power(int a,int b)
+   private long power(long a,int b)
    {
-       int result=1;
+       long result=1;
+       a=a%modulo;
        while(b!=0)
        {
            if(b%2==1)
@@ -83,19 +88,19 @@ for(int i=0;i<primes.size();i++)
 
        return result;
    }
-    private int[] findSieve(int factorial) {
-        int[] sieve=new int[factorial+1];
+    private void findSieve(long factorial) {
+        int[] sieve=new int[400000+1];
 
-        for(int i=2;i<=factorial;i++)
+        for(int i=2;i<=400000;i++)
         {
            if(sieve[i]==0) {
                sieve[i] = i;
-               primes.add(i);
+               primes.add(i*1l);
            }
            //System.out.println(i);//46341
-           if((i*1l*i)>factorial)
+           if((i*1l*i)>400000)
                continue;
-           for(int j=(int)(i*i*1l)%modulo;j<=factorial;j+=i)
+           for(int j=(int)(i*i*1l)%modulo;j<=400000;j+=i)
            {
                //System.out.println(325611);
 
@@ -103,10 +108,10 @@ for(int i=0;i<primes.size();i++)
                  sieve[j]=i;
            }
         }
-        return sieve;
+
     }
 
-    private int fact(int A)
+    private long fact(int A)
     {
         if(A==1)
             return 1;
@@ -115,6 +120,6 @@ for(int i=0;i<primes.size();i++)
   public static void main(String[] arg)
   {
       SumOfDivisors sd=new SumOfDivisors();
-      System.out.println(sd.solve(11));
+      System.out.println(sd.solve(13));
   }
 }
