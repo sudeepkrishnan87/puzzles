@@ -22,6 +22,7 @@ NOTE: A set is a data structure having only distinct elements. Eg : the set of p
 *
 * Ans:No need to find the prime factorials of the array elements , just find the prime factors and follow the
 *
+* 2^1-1+2^1-1+3^
 * */
 public class FactorialArray {
     int mod=1000*1000*1000+7;
