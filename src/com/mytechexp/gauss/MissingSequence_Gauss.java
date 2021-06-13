@@ -1,4 +1,4 @@
-package com.mytechexp;
+package com.mytechexp.gauss;
 
 import java.util.Arrays;
 /*
