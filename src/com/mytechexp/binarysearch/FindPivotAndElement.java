@@ -35,14 +35,14 @@ public class FindPivotAndElement {
                 return -1;
             if(A.get(start)<A.get(mid))
             {
-                if(A.get(start)<=B && A.get(mid)>=B)
+                if(A.get(start)<=B && A.get(mid)>B)
                   end=mid-1;
                 else
                     start=mid+1;
 
             }
             else
-                if(A.get(mid)<=B && A.get(end)>=B)
+                if(A.get(mid)<B && A.get(end)>=B)
                     start=mid+1;
                 else
                     end=mid-1;
